@@ -1,0 +1,253 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f5fb;
+    color: #1f2937;
+    line-height: 1.5;
+}
+
+.page-wrapper {
+    width: 95%;
+    max-width: 1200px;
+    margin: 28px auto;
+}
+
+
+.header-box {
+    background: linear-gradient(135deg, #1d4ed8, #3b82f6);
+    color: #ffffff;
+    padding: 26px 30px;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
+}
+
+.header-box h1 {
+    font-size: 28px;
+    margin-bottom: 6px;
+}
+
+.header-box p {
+    font-size: 14px;
+    opacity: 0.95;
+}
+
+
+.content-layout {
+    display: grid;
+    grid-template-columns: 0.85fr 1.45fr;
+    gap: 22px;
+    background-color: #ffffff;
+    padding: 22px;
+    border-radius: 0 0 12px 12px;
+    border: 1px solid #e5e7eb;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(15, 23, 42, 0.06);
+    overflow: hidden;
+}
+
+.card-title-area {
+    padding: 18px 20px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.card-title-area h2 {
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.card-title-area p {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+
+form {
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    height: 42px;
+    padding: 0 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 9px;
+    outline: none;
+    font-size: 14px;
+    background-color: #ffffff;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.14);
+}
+
+.error-message {
+    display: block;
+    min-height: 18px;
+    margin-top: 4px;
+    color: #dc2626;
+    font-size: 12px;
+}
+
+.button-row {
+    display: grid;
+    grid-template-columns: 1fr 0.75fr;
+    gap: 12px;
+    margin-top: 4px;
+}
+
+.btn {
+    border: none;
+    border-radius: 9px;
+    padding: 12px 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-primary {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-light {
+    background-color: #f3f4f6;
+    color: #374151;
+    border: 1px solid #e5e7eb;
+}
+
+.btn-light:hover {
+    background-color: #e5e7eb;
+}
+
+.table-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.note-box {
+    background-color: #eff6ff;
+    color: #1d4ed8;
+    border: 1px solid #bfdbfe;
+    border-radius: 20px;
+    padding: 7px 12px;
+    font-size: 13px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #f9fafb;
+}
+
+th,
+td {
+    padding: 15px 14px;
+    border-bottom: 1px solid #edf0f5;
+    text-align: left;
+    font-size: 14px;
+}
+
+th {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    color: #4b5563;
+}
+
+tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+.badge {
+    display: inline-block;
+    min-width: 78px;
+    text-align: center;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.badge-success {
+    background-color: #dcfce7;
+    color: #15803d;
+}
+
+.badge-danger {
+    background-color: #ffe4e6;
+    color: #be123c;
+}
+
+.empty-row {
+    text-align: center;
+    color: #6b7280;
+    padding: 24px;
+}
+
+@media (max-width: 900px) {
+    .content-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-wrapper {
+        width: 100%;
+        margin: 0;
+    }
+
+    .header-box,
+    .content-layout {
+        border-radius: 0;
+    }
+
+    .button-row,
+    .table-title-row {
+        grid-template-columns: 1fr;
+        display: grid;
+    }
+
+    .header-box h1 {
+        font-size: 23px;
+    }
+}
